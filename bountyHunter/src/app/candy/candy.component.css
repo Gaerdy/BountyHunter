@@ -1,0 +1,10 @@
+.candy-box{
+    border: 1px solid #413D61;
+    margin-bottom : 2vh;
+}
+
+img{
+    margin-top:3vh;
+    width: 80%;
+    border-radius:50%
+}

@@ -10,11 +10,12 @@ body {
   font-size: 4em;
   letter-spacing: 0.2rem;
 }
-
-.font-title {
-  font-family: 'Baloo Bhaijaan', cursive;
-  color: #fff;
-  font-size: 3em;
+.font-title{
+    font-family: 'Baloo Bhaijaan', cursive;
+    color:#fff;
+    font-size: 3em;
+    margin-bottom:0.1em;
+    line-height: 1em;
 }
 
 .font-text {
@@ -37,4 +38,9 @@ body {
 #map {
   /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
   height: 100vh;
+}
+
+/* display none */
+.hidden-page{
+    display:none;
 }
