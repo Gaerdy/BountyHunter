@@ -24,7 +24,7 @@
 <!-- List -->
 <div id="list-background">
   <div id="list-bonbons">
-    <div *ngFor="let current of images" class="col-4 d-inline-block">
+    <div *ngFor="let current of images | search" class="col-4 d-inline-block">
       <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current)"></app-candy>
     </div>
   </div>
