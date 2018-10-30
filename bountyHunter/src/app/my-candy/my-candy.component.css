@@ -1,0 +1,19 @@
+.candyTitle{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.6vh;
+}
+
+.candyInfo{
+    margin-top: 1vh;
+}
+
+.candy{
+    width: 100%;
+    text-align: center;
+}
+
+p{
+    position: absolute;
+    left: 10vh;
+    margin: 0;
+}

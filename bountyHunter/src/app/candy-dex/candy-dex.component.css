@@ -19,21 +19,29 @@
     height: 45vh
 }
 
+.candyClass{
+    min-height: 90vh;
+    padding: 5vh 3vh;
+    background-color: orange;
+}
+
 .badgeBox{
     margin: 0 1vh;
     /* background-color: red; */
 }
 
-h3{
-    /* background-color: white; */
-    margin-top: 3vh;
-    padding: 0;
-    text-align: center;
+.candyBox{
+    margin: 0 1vh;
+    height: 20vh;
 }
 
-.bonbon{
-    height: 90vh;
-    background-color: orange;
+h3{
+    /* background-color: white; */
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .hidden{

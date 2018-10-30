@@ -25,15 +25,29 @@ export class CandyDexComponent implements OnInit {
     { name: 'Ultime', img: 'assets/candy6.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
   ];
 
+  public candyList: any[] = [
+    { name: 'Fraise Tagada', img: 'assets/candy3.png', counter: 14 },
+    { name: 'M&M\'s', img: 'assets/candy3.png', counter: 23 },
+    { name: 'Bounty', img: 'assets/candy3.png', counter: 1 },
+    { name: 'Ourson', img: 'assets/candy3.png', counter: 3 },
+    { name: 'Dragibus', img: 'assets/candy3.png', counter: 16 },
+    { name: 'Fraise Tagada', img: 'assets/candy3.png', counter: 14 },
+    { name: 'M&M\'s', img: 'assets/candy3.png', counter: 23 },
+    { name: 'Bounty', img: 'assets/candy3.png', counter: 1 },
+    { name: 'Ourson', img: 'assets/candy3.png', counter: 3 },
+    { name: 'Dragibus', img: 'assets/candy3.png', counter: 16 }
+  ];
+
   public currentBadge: any = {
     'name': '',
     'img': '',
     'description': ''
   };
 
-  public currentSelectedCandy: any = {
+  public currentCandy: any = {
     'name': '',
-    'img': ''
+    'img': '',
+    'counter': 0
   };
 
   public status: boolean = false;
@@ -44,9 +58,10 @@ export class CandyDexComponent implements OnInit {
     this.currentBadge.description = badge.description;
   }
 
-  public CandyInfo(param_obj: any): any {
-    this.currentSelectedCandy.name = param_obj.name;
-    this.currentSelectedCandy.img = param_obj.img;
+  public CandyInfo(candy: any): any {
+    this.currentCandy.name = candy.name;
+    this.currentCandy.img = candy.img;
+    this.currentCandy.counter = candy.counter;
   }
 
   public clickEvent(witchOne: string): void {

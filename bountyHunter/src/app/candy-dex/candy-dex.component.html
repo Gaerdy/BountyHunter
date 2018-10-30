@@ -20,6 +20,10 @@
     </div>
 </div>
 
-<div id="candyTab" class="bonbon">
-
+<div id="candyTab">
+    <div class="row candyClass justify-content-center">
+        <div class="candyBox col-3 p-0" *ngFor='let current of candyList'>
+            <app-my-candy [name]='current.name' [img]='current.img' [counter]='current.counter' [description]='current.description'></app-my-candy>
+        </div>
+    </div>
 </div>
