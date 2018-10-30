@@ -56,8 +56,7 @@ export class ListComponent implements OnInit {
     );
   }
 
-  // Methods  
-
+  // PopUp - Augmenter nombres de bonbons
   public candyNumber:number =0;
   candyUp(){
     if (this.candyNumber <99 ) {
@@ -84,9 +83,13 @@ export class ListComponent implements OnInit {
         } 
       }
     );  
+    setTimeout(()=>{
+      document.getElementById("app-list").classList.add("hidden-page");
+    },1600)
   }
 
   displayCounterBox(){
+    this.candyNumber = 0;
     let counterBoxEl = document.getElementById("list-popup-container-container");
     counterBoxEl.classList.remove("hidden-page");
   }

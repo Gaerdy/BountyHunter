@@ -1,9 +1,23 @@
 .candy-box{
-    border: 1px solid #413D61;
     margin-bottom : 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.candy-box:active {
+    transform:scale(0.98);
+}
+.candy-box > p {
+    text-align: center;
 }
 
-img{
-    margin-top:3vh;
-    width: 80%;
+#candy-box-img{
+    width:90%;
+    height: 23.5vw;
+    border-radius:50%;
+    border:solid #fff 2px;
+    background-size:100%;
+    background-position: center;
+    margin-bottom:2vh;
 }
