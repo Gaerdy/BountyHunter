@@ -56,7 +56,7 @@
     align-items: center;
 }
 #search-input{
-    width:90%;
+    width:100%;
     height: 5vh;
     margin-top:2vh;
     margin-bottom:3vh;
@@ -65,6 +65,9 @@
     padding-right:5%;
 }
 #search-input::placeholder{
+    color:#ADAAC6;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
 }
 #search-input:focus{
     outline: none;

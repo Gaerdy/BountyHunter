@@ -1,11 +1,9 @@
 .candy-box{
-    color:black;
-    border-radius:10%;
-    border: 1px solid black;
-    margin-bottom : 10px;
+    border: 1px solid #413D61;
+    margin-bottom : 2vh;
 }
 
 img{
-    margin-top:25px;
+    margin-top:3vh;
     width: 80%;
 }

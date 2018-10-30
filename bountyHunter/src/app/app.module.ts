@@ -13,12 +13,11 @@ import { ResponseComponent } from './response/response.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
     CandyComponent,
     CandyInfoComponent,
     SearchComponent,
+    ResponseComponent,
     ListComponent,
-    ResponseComponent
   ],
   imports: [
     BrowserModule,
