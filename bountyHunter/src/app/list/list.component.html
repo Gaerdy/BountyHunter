@@ -1,10 +1,7 @@
-<!-- Button to top -->
-<div id="list-button-top">
-  <div (click)="goTop()" class="font-text">Retour à la recherche</div>
-</div>
+
 <!-- pop-up -->
 <div id="list-popup-container-container" class="hidden-page">
-  <div id="list-popup-container"class="hidden">
+  <div id="list-popup-container">
     <div id="list-popup" >
       <div id="list-pop-up-picture"></div>
       <div id="list-pop-up-name" class="font-text">Nom du bonbon</div>
@@ -20,11 +17,18 @@
     </div>
   </div>
 </div>
+
 <!-- List -->
 <div id="list-background">
-  <div id="list-bonbons">
-    <div *ngFor="let current of candiesLists" class="list-bonbon">
-      <app-candy [name]="current.name" [img]="current.img"></app-candy>
+  <div id="list-container">
+    <div id="list-bonbons">
+      <div *ngFor="let current of candiesLists" class="list-bonbon">
+        <app-candy [name]="current.name" [img]="current.img"></app-candy>
+      </div>
     </div>
+  </div>
+    <!-- Button to top -->
+  <div id="list-button-top" (click)="goTop()">
+      <div id="list-button-text" class="font-text"><div id="list-button-border">Retour à la recherche</div></div>
   </div>
 </div>
