@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-candy',
@@ -7,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CandyComponent implements OnInit {
 
-  public candy:any = {
-    "name":"Haribo",
-    "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5mqg9cwm99ab_iR96QUpIXjr7BlB_fEHZ8EZOKj20SLzMkp9hyw"
-  }
+  @Input() name:string = "Haribo";
+  @Input() img:string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUtYXec86sf9Kfjqor140LELj5edM8EzANq8poCrvLt7LpnjL";
+
 
   constructor() { }
 
