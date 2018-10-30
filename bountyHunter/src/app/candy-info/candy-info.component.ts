@@ -1,28 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoBonbonService } from '../info-bonbon.service';
+import { InfoBonbonService } from "../info-bonbon.service";
+import { BonbonInfo } from "../bonbon-info";
 import { Observable } from 'rxjs';
-import { BonbonInfo } from '../bonbon-info';
+
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'app-candy-info',
+  templateUrl: './candy-info.component.html',
+  styleUrls: ['./candy-info.component.css']
 })
-export class ListComponent implements OnInit {
-
-  // Gestion du clic pour le bonbon sélectionné ( Participage à l'affichage de la popup)
-  public currentSelectedCandy: any = {
-    "name": "",
-    "img": ""
-  }
-
-  public CandyInfo(param_obj: any): any {
-    this.currentSelectedCandy.name = param_obj.name;
-    this.currentSelectedCandy.img = param_obj.img;
-  }
-
-  // Utilisation service
-
+export class CandyInfoComponent implements OnInit {
 
   public planetImg: BonbonInfo = null;
 
@@ -43,7 +30,6 @@ export class ListComponent implements OnInit {
   ngOnInit() {
 
     const obs: Observable<any[]> = this.service.getBonbonInfo(this.planetImg.planet);
-    
     obs.subscribe(
       (param_images_urls: any[]) => {
         this.images = param_images_urls;
@@ -52,8 +38,4 @@ export class ListComponent implements OnInit {
     );
   }
 
-
-
 }
-
-

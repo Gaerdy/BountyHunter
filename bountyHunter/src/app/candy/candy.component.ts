@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CandyComponent implements OnInit {
 
-  @Input() name:string = "Haribo";
-  @Input() img:string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUtYXec86sf9Kfjqor140LELj5edM8EzANq8poCrvLt7LpnjL";
+  @Input() product_name:string = "Haribo";
+  @Input() image_url:string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUtYXec86sf9Kfjqor140LELj5edM8EzANq8poCrvLt7LpnjL";
 
   constructor() { }
 
