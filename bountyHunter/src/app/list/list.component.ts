@@ -3,8 +3,8 @@ import { InfoBonbonService } from '../info-bonbon.service';
 import { Observable } from 'rxjs';
 import { BonbonInfo } from '../bonbon-info';
 
-declare var TweenMax:any;
-declare var Power4:any;
+declare var TweenMax: any;
+declare var Power4: any;
 
 @Component({
   selector: 'app-list',
@@ -36,8 +36,8 @@ export class ListComponent implements OnInit {
   private service: InfoBonbonService;
 
   constructor(
-    param_bonbon_service : InfoBonbonService
-  ) { 
+    param_bonbon_service: InfoBonbonService
+  ) {
     this.planetImg = new BonbonInfo("bonbon", "bonbon");
     this.service = param_bonbon_service;
     this.img = "";
@@ -47,7 +47,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
 
     const obs: Observable<any[]> = this.service.getBonbonInfo(this.planetImg.planet);
-    
+
     obs.subscribe(
       (param_images_urls: any[]) => {
         this.images = param_images_urls;
@@ -58,49 +58,59 @@ export class ListComponent implements OnInit {
 
   // Methods  
 
-  public candyNumber:number =0;
-  candyUp(){
-    if (this.candyNumber <99 ) {
-      this.candyNumber ++;
+  public candyNumber: number = 0;
+  candyUp() {
+    if (this.candyNumber < 99) {
+      this.candyNumber++;
     }
   }
-  candyDown(){
-    if ( this.candyNumber > 0) {
-      this.candyNumber --;
-    }  
+  candyDown() {
+    if (this.candyNumber > 0) {
+      this.candyNumber--;
+    }
   }
 
-  goTop(){
+  goTop() {
     let pos = parseInt(window.pageYOffset.toString());
-    let proxy:any = { y: pos};
+    let proxy: any = { y: pos };
     TweenMax.to(
-      proxy, 
-      2, 
+      proxy,
+      2,
       {
         ease: Power4.easeOut,
         y: 0,
-        onUpdate: function(){
+        onUpdate: function () {
           window.scrollTo(0, proxy.y);
-        } 
+        }
       }
-    );  
+    );
   }
 
-  displayCounterBox(){
+  displayCounterBox() {
     let counterBoxEl = document.getElementById("list-popup-container-container");
     counterBoxEl.classList.remove("hidden-page");
   }
 
-  hideCounterBox(){
+  hideCounterBox() {
     let counterBoxEl = document.getElementById("list-popup-container-container");
     counterBoxEl.classList.add("hidden-page");
   }
 
-  addCandiesInLocalStorage(nbCandies:number){
+  addCandiesInLocalStorage(nbCandies: number, url_img: string) {
 
-    localStorage.setItem("'" + this.currentSelectedCandy.name + "'" , nbCandies.toString());
+    if (nbCandies != 0) {
+      let objet = {
+        "name": this.currentSelectedCandy.name,
+        "nbCandies": nbCandies,
+        "url_img": url_img
+      }
+      let objet_json = JSON.stringify(objet);
 
-    console.log(localStorage.getItem("'" + this.currentSelectedCandy.name + "'" ));
+      localStorage.setItem("'" + this.currentSelectedCandy.name + "'", objet_json);
+    }
+
+
+    console.log(localStorage.getItem("'" + this.currentSelectedCandy.name + "'"));
     console.log(localStorage);
   }
 
