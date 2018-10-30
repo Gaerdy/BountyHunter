@@ -12,7 +12,9 @@ html, body {
 .font-title{
     font-family: 'Baloo Bhaijaan', cursive;
     color:#fff;
-    font-size: 1.5rem;
+    font-size: 1em;
+    margin-bottom:0.1em;
+    line-height: 1em;
 }
 .font-text{
     font-family: 'Quicksand', sans-serif;
@@ -26,4 +28,9 @@ html, body {
     font-weight: 300;
     font-size: 1rem;
     color:#fff;
+}
+
+/* display none */
+.hidden-page{
+    display:none;
 }

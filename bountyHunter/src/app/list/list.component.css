@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .listPage{
     background-color: blueviolet;
 }
@@ -30,3 +31,100 @@ h3{
     padding: 0;
     text-align: center;
 }
+=======
+#list-button-top{
+    width:100%;
+    height: 10vh;
+    background: #f9af1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#list-background{
+    width: 100%;
+    height: 90vh;
+    background: #1F1D2F;
+    padding-top:5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+#list-bonbons{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.list-bonbon{
+    width:30%;
+}
+
+/* Pop-up */
+#list-popup-container{
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-popup{
+    width: 80%;
+    height: 70vh;
+    background: #1F1D2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#list-pop-up-picture{
+    width:50%;
+    height: 40vw;
+    background: #fff;
+}
+#list-pop-up-name{
+    margin-top:2vh;
+}
+#list-pop-up-number{
+    margin-top:2vh;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3em;
+}
+#list-pop-up-arrows{
+    width: 20%;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.list-pop-up-arrow{
+    height: 40%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#list-pop-up-button{
+    margin-top:4vh;
+    width: 70%;
+    padding:2vh;
+    border:solid #fff 1px;
+    background: none;
+}
+#list-pop-up-button:focus{
+    outline: none;
+}
+#list-pop-up-button:active{
+    opacity: 0.7;
+}
+
+
+>>>>>>> d86e23b2b6ac8df3c2673982eaf0e339b8120389
