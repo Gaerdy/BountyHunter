@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
+import { ResponseComponent } from './response/response.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     ListComponent,
-    MapComponent
+    MapComponent,
+    ResponseComponent
   ],
   imports: [
     BrowserModule
