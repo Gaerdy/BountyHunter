@@ -1,0 +1,41 @@
+.listPage{
+    background-color: blueviolet;
+}
+
+.candyPage{
+    background-color: orange;
+}
+
+.successPage{
+    background-color: blueviolet;
+}
+
+.navToggle{
+    text-align: center;
+    height: 10vh;
+}
+
+.successClass{
+    height: 45vh
+}
+
+.badgeBox{
+    margin: 0 1vh;
+    /* background-color: red; */
+}
+
+h3{
+    /* background-color: white; */
+    margin-top: 3vh;
+    padding: 0;
+    text-align: center;
+}
+
+.bonbon{
+    height: 90vh;
+    background-color: orange;
+}
+
+.hidden{
+    display: none;
+}

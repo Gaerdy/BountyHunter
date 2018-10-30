@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row navToggle d-flex">
+        <div class="col-6 font-scary-title candyPage" (click)="clickEvent('candy')">Bonbons</div>
+        <div class="col-6 font-scary-title successPage" (click)="clickEvent('success')">Succès</div>
+    </div>
+</div>
+
+<div id="successTab" class="listPage container-fluid hidden">
+    <div class="row successClass justify-content-center">
+        <h3 class="col-9 font-scary-title">Niveaux</h3>
+        <div class="badgeBox col-3 p-0" *ngFor='let current of levelList'>
+            <app-success [name]='current.name' [img]='current.img' [description]='current.description'></app-success>
+        </div>
+    </div>
+    <div class="row successClass justify-content-center">
+        <h3 class="col-9 font-scary-title">Bonus</h3>
+        <div class="badgeBox col-3 p-0" *ngFor='let current of hunterList'>
+            <app-success [name]='current.name' [img]='current.img' [description]='current.description'></app-success>
+        </div>
+    </div>
+</div>
+
+<div id="candyTab" class="bonbon">
+
+</div>
