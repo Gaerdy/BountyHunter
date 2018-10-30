@@ -1,10 +1,16 @@
+<div id="list-popup-container-container" class="">
+    <div id="list-popup-container" class="hidden">
+        <div id="list-popup">
+            <div id="list-pop-up-picture"><img class="fill" src={{images[95].image_url}} /></div>
+            <div id="list-pop-up-name" class="font-text">Nom : {{images[95].product_name}}</div>
+            <div id="list-pop-up-name" class="font-small-text">Code barre : {{images[95].id}}</div>
+            <div id="list-pop-up-text" class="font-small-text">Description : Aussi appelé {{images[95].generic}}, ce
+                bonbon est fabriqué par {{images[95].brands}}. On le trouve principalement en {{images[95].countries}}. 
+                Il est le plus souvent commercialisé chez {{images[95].stores}} en sachet de {{images[95].quantity}}.</div>
 
 
-<div *ngFor="let current of images">
-    <img src={{current.image_url}} />
-    <p>{{current.product_name}}</p>
-    <p>{{current.brands}}</p>
-    <p>{{current.ingredients_text}}</p>
-    <p>{{current.nova_group}}</p>
-    <p>{{current.nutrition_grade_fr}}</p>
+
+        </div>
+
+    </div>
 </div>
