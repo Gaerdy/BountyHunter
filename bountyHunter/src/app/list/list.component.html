@@ -1,7 +1,5 @@
 <!-- Button to top -->
-<div id="list-button-top">
-  <div (click)="goTop()" class="font-text">Retour à la recherche</div>
-</div>
+
 <!-- pop-up -->
 <div id="list-popup-container-container" class="hidden-page">
   <div id="list-popup-container" class="hidden">
@@ -23,9 +21,12 @@
 
 <!-- List -->
 <div id="list-background">
-  <div id="list-bonbons">
-    <div *ngFor="let current of images" class="col-4 d-inline-block">
-      <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current)"></app-candy>
+    <div id="list-bonbons">
+      <div *ngFor="let current of images" class="list-bonbon">
+        <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current)"></app-candy>
+      </div>
     </div>
-  </div>
 </div>
+<div id="list-button-top">
+    <div (click)="goTop()" class="font-text">Retour à la recherche</div>
+  </div>
