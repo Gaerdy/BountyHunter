@@ -6,6 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { ListComponent } from './list/list.component';
 import { MapComponent } from './map/map.component';
 import { ResponseComponent } from './response/response.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ResponseComponent } from './response/response.component';
     SearchComponent,
     ListComponent,
     MapComponent,
-    ResponseComponent
+    ResponseComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule
