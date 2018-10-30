@@ -1,26 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
 import { ListComponent } from './list/list.component';
-import { ResponseComponent } from './response/response.component';
 import { CandyComponent } from './candy/candy.component';
 import { MapComponent } from "./map/map.component";
+import { CandyInfoComponent } from './candy-info/candy-info.component';
+import { InfoBonbonService } from './info-bonbon.service';
+import { SearchComponent } from './search/search.component';
+import { ResponseComponent } from './response/response.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CandyComponent,
+    CandyInfoComponent,
     SearchComponent,
-    ListComponent,
     ResponseComponent,
     CandyComponent,
-    MapComponent
+    MapComponent,
+    ListComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [InfoBonbonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

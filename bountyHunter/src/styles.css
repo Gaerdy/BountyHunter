@@ -2,6 +2,9 @@ html,
 body {
   margin: 0;
 }
+/* Navigation */
+
+
 
 /* Fonts */
 .font-scary-title {
@@ -37,7 +40,7 @@ body {
 
 #map {
   /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
-  height: 100vh;
+  height: 50vh;
 }
 
 /* display none */
