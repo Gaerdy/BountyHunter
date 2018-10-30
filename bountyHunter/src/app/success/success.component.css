@@ -1,0 +1,12 @@
+.badgeTitle{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.6vh;
+}
+
+.badgeInfo{
+    margin-top: 1vh;
+}
+
+.badge{
+    width: 100%;
+}

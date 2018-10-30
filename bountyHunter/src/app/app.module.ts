@@ -9,6 +9,7 @@ import { CandyInfoComponent } from './candy-info/candy-info.component';
 import { InfoBonbonService } from './info-bonbon.service';
 import { SearchComponent } from './search/search.component';
 import { ResponseComponent } from './response/response.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ResponseComponent } from './response/response.component';
     SearchComponent,
     ResponseComponent,
     ListComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,

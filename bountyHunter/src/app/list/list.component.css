@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+.listPage{
+    background-color: blueviolet;
+}
+
+.candyPage{
+    background-color: orange;
+}
+
+.successPage{
+    background-color: blueviolet;
+}
+
+.navToggle{
+    text-align: center;
+    height: 10vh;
+}
+
+.successClass{
+    height: 45vh
+}
+
+.badgeBox{
+    margin: 0 1vh;
+    /* background-color: red; */
+}
+
+h3{
+    /* background-color: white; */
+    margin-top: 3vh;
+    padding: 0;
+    text-align: center;
+}
+=======
 #list-button-top{
     width:100%;
     height: 10vh;
@@ -93,3 +127,4 @@
 }
 
 
+>>>>>>> d86e23b2b6ac8df3c2673982eaf0e339b8120389
