@@ -1,3 +1,13 @@
+<div id="candy-info-box-container">
+    <div id="candy-info-box">
+      <div id="candy-info">
+        <div>{{currentSelectedCandy.name}}</div>
+        <img src={{currentSelectedCandy.img}}>
+      </div>
+    </div>
+  </div>
+  
 <div *ngFor="let current of candiesLists" class="col-4 d-inline-block">
-  <app-candy [name]="current.name" [img]="current.img"></app-candy>
+  <app-candy [name]="current.name" [img]="current.img" (click)="CandyInfo(current)"></app-candy>
 </div>
+

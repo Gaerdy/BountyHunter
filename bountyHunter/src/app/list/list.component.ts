@@ -7,25 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  public candiesLists:any[]=[
+  public currentSelectedCandy: any = {
+    "name": "",
+    "img": ""
+  }
+
+  public candiesLists: any[] = [
     {
-      "name":"Haribo",
-      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUtYXec86sf9Kfjqor140LELj5edM8EzANq8poCrvLt7LpnjL"
+      "name": "Haribo",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUtYXec86sf9Kfjqor140LELj5edM8EzANq8poCrvLt7LpnjL"
     },
     {
-      "name":"M&Ms",
-      "img":"https://www.bonbonz.be/377-large_default/bonbons-haribo-pico-balla.jpg"
+      "name": "M&Ms",
+      "img": "https://www.bonbonz.be/377-large_default/bonbons-haribo-pico-balla.jpg"
     },
     {
-      "name":"Tagada",
-      "img":"https://www.espace-bonbon.fr/808-thickbox_default/berlingot-provencaux.jpg"
+      "name": "Tagada",
+      "img": "https://www.espace-bonbon.fr/808-thickbox_default/berlingot-provencaux.jpg"
     },
     {
-      "name":"Lolilo",
-      "img":"https://www.dragees-massardier.fr/boutique/images_produits/bisou_fraise-z.jpg"
+      "name": "Lolilo",
+      "img": "https://www.dragees-massardier.fr/boutique/images_produits/bisou_fraise-z.jpg"
     }
   ]
 
+  public CandyInfo(param_obj:any):any {
+    this.currentSelectedCandy.name = param_obj.name;
+    this.currentSelectedCandy.img = param_obj.img;
+  }
   constructor() { }
 
   ngOnInit() {

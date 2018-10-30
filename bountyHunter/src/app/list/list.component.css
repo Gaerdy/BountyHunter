@@ -1,0 +1,15 @@
+#candy-info-box{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+#candy-info{
+    margin-left:50%;
+}
+
+#candy-info-box-container{
+    position: relative;
+}
