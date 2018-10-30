@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoBonbonService } from '../info-bonbon.service';
+import { Observable } from 'rxjs';
+import { BonbonInfo } from '../bonbon-info';
 
 declare var TweenMax:any;
 declare var Power4:any;
@@ -10,32 +13,48 @@ declare var Power4:any;
 })
 export class ListComponent implements OnInit {
 
-  public candiesLists:any[]=[
-    {
-      "name":"Haribo",
-      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUtYXec86sf9Kfjqor140LELj5edM8EzANq8poCrvLt7LpnjL"
-    },
-    {
-      "name":"M&Ms",
-      "img":"https://www.bonbonz.be/377-large_default/bonbons-haribo-pico-balla.jpg"
-    },
-    {
-      "name":"Tagada",
-      "img":"https://www.espace-bonbon.fr/808-thickbox_default/berlingot-provencaux.jpg"
-    },
-    {
-      "name":"Lolilo",
-      "img":"https://www.dragees-massardier.fr/boutique/images_produits/bisou_fraise-z.jpg"
-    }
-  ]
-
-  public candyNumber:number = 0;
-
-  constructor() { }
-
-  ngOnInit() {
+  // Gestion du clic pour le bonbon sélectionné ( Participage à l'affichage de la popup)
+  public currentSelectedCandy: any = {
+    "name": "",
+    "img": ""
   }
 
+  public CandyInfo(param_obj: any): any {
+    this.currentSelectedCandy.name = param_obj.name;
+    this.currentSelectedCandy.img = param_obj.img;
+  }
+
+  // Utilisation service
+
+
+  public planetImg: BonbonInfo = null;
+
+  public img: string = "";
+  public images: string[];
+
+  private service: InfoBonbonService;
+
+  constructor(
+    param_bonbon_service : InfoBonbonService
+  ) { 
+    this.planetImg = new BonbonInfo("bonbon", "bonbon");
+    this.service = param_bonbon_service;
+    this.img = "";
+    this.images = [];
+  }
+
+  ngOnInit() {
+
+    const obs: Observable<any[]> = this.service.getBonbonInfo(this.planetImg.planet);
+    
+    obs.subscribe(
+      (param_images_urls: any[]) => {
+        this.images = param_images_urls;
+      }
+
+    );
+  }
+  public candyNumber:number =0;
   candyUp(){
     if (this.candyNumber <99 ) {
       this.candyNumber ++;
