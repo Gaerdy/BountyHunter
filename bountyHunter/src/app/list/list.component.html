@@ -1,3 +1,30 @@
-<div *ngFor="let current of candiesLists" class="col-4 d-inline-block">
-  <app-candy [name]="current.name" [img]="current.img"></app-candy>
+<!-- Button to top -->
+<div id="list-button-top">
+  <div (click)="goTop()" class="font-text">Retour à la recherche</div>
+</div>
+<!-- pop-up -->
+<div id="list-popup-container-container" class="hidden-page">
+  <div id="list-popup-container"class="hidden">
+    <div id="list-popup" >
+      <div id="list-pop-up-picture"></div>
+      <div id="list-pop-up-name" class="font-text">Nom du bonbon</div>
+      <div id="list-pop-up-number">
+        <div id="list-pop-up-arrows">
+            <div id="list-pop-up-up" (click)="candyUp()" class="list-pop-up-arrow">+</div>
+            <div id="list-pop-up-down" (click)="candyDown()" class="list-pop-up-arrow">-</div>
+        </div>
+        <div class="font-text">{{candyNumber}}</div>
+        
+      </div>
+      <button id="list-pop-up-button" class="font-text">Ajouter</button>
+    </div>
+  </div>
+</div>
+<!-- List -->
+<div id="list-background">
+  <div id="list-bonbons">
+    <div *ngFor="let current of candiesLists" class="list-bonbon">
+      <app-candy [name]="current.name" [img]="current.img"></app-candy>
+    </div>
+  </div>
 </div>

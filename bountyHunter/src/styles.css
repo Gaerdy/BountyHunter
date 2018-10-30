@@ -30,3 +30,8 @@ html, body {
     font-size: 1em;
     color:#fff;
 }
+
+/* display none */
+.hidden-page{
+    display:none;
+}

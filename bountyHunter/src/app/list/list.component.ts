@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var TweenMax:any;
+declare var Power4:any;
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -26,9 +29,38 @@ export class ListComponent implements OnInit {
     }
   ]
 
+  public candyNumber:number = 0;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  candyUp(){
+    if (this.candyNumber <99 ) {
+      this.candyNumber ++;
+    }
+  }
+  candyDown(){
+    if ( this.candyNumber > 0) {
+      this.candyNumber --;
+    }  
+  }
+
+  goTop(){
+    let pos = parseInt(window.pageYOffset.toString());
+    let proxy:any = { y: pos};
+    TweenMax.to(
+      proxy, 
+      2, 
+      {
+        ease: Power4.easeOut,
+        y: 0,
+        onUpdate: function(){
+          window.scrollTo(0, proxy.y);
+        } 
+      }
+    );  
   }
 
 }
