@@ -5,11 +5,19 @@ import { HttpModule } from "@angular/http";
 import { AppComponent } from './app.component';
 import { CandyInfoComponent } from './candy-info/candy-info.component';
 import { InfoBonbonService } from './info-bonbon.service';
+import { SearchComponent } from './search/search.component';
+import { ListComponent } from './list/list.component';
+import { MapComponent } from './map/map.component';
+import { ResponseComponent } from './response/response.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CandyInfoComponent
+    CandyInfoComponent,
+    SearchComponent,
+    ListComponent,
+    MapComponent,
+    ResponseComponent
   ],
   imports: [
     BrowserModule,

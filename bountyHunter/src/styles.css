@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    margin:0;
+}
+
+/* Fonts */
+.font-scary-title {
+    font-family: 'Permanent Marker', cursive;
+    color:#fff;
+    font-size: 4em;
+    letter-spacing: 0.2rem;
+}
+.font-title{
+    font-family: 'Baloo Bhaijaan', cursive;
+    color:#fff;
+    font-size: 3em;
+    margin-bottom:0.1em;
+    line-height: 1em;
+}
+.font-text{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color:#fff;
+}
+
+.font-small-text{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color:#fff;
+}
