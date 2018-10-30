@@ -1,0 +1,34 @@
+#search-background{
+    width: 100%;
+    height: 100vh;
+    background:#F9851F;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Topbar */
+#search-topbar{
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.search-icone{
+    width: 20%;
+    height: 100%;
+    margin-top:5vh;
+    background:#fff;
+}
+.search-icone:hover{
+    cursor: pointer;
+}
+/* Message d'accueil */
+#search-welcome{
+    margin-top:20vh;
+}
+
+/* Recherche */
+#search-research{
+    margin-top:10vh;
+}
