@@ -14,6 +14,8 @@ html, body {
     font-family: 'Baloo Bhaijaan', cursive;
     color:#fff;
     font-size: 3em;
+    margin-bottom:0.1em;
+    line-height: 1em;
 }
 .font-text{
     font-family: 'Quicksand', sans-serif;
