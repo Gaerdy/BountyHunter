@@ -41,9 +41,11 @@
 
   <script type="text/javascript">
     // On initialise la latitude et la longitude de Paris (centre de la carte)
-    var lat = 48.852969;
-    var lon = 2.349903;
+    var lat = 48.473909;
+    var lon = 1.011942;
     var macarte = null;
+    // Nous initialisons une liste de marqueurs
+    let VisitedHouses = localStorage.getItem("VisitedHouses");
     // Fonction d'initialisation de la carte
     function initMap() {
       // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
@@ -55,14 +57,21 @@
         minZoom: 1,
         maxZoom: 20
       }).addTo(macarte);
+      // Ajout des marqueurs de maisons visitées
+      for (house in VisitedHouses) {
+        var marker = L.marker([VisitedHouses[house].lat, VisitedHouses[house].lon]).addTo(macarte);
+        // Nous ajoutons la popup. A noter que son contenu (ici la variable ville) peut être du HTML
+        marker.bindPopup(VisitedHouses[house].name);
+      }
     }
     window.onload = function () {
       // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
       initMap();
     };
+
   </script>
 
-  
+
 </body>
 
 </html>
