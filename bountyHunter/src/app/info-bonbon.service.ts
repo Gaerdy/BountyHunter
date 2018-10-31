@@ -39,11 +39,17 @@ export class InfoBonbonService {
                 "brands": products[i].brands,
                 "ingredients_text": products[i].ingredients_text,
                 "nova_group": products[i].nova_group,
-                "nutrition_grade_fr": products[i].nutrition_grade_fr
+                "nutrition_grade_fr": products[i].nutrition_grade_fr,
+                "stores": products[i].stores,
+                "packaging": products[i].packaging,
+                "countries": products[i].countries,
+                "quantity": products[i].quantity,
+                "id": products[i].id,
+                "generic": products[i].generic_name_fr
               }
             );
           }
-
+          console.log(images);
           return images;
 
         }

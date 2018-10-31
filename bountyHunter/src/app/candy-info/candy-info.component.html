@@ -1,19 +1,16 @@
-<img src={{images[99].image_url}} />
-<p>{{images[99].product_name}}</p>
-<p>{{images[99].brands}}</p>
-<p>{{images[99].ingredients_text}}</p>
-<p>{{images[99].nova_group}}</p>
-<p>{{images[99].nutrition_grade_fr}}</p>
-
-<img src={{images[98].image_url}} />
-<p>{{images[98].product_name}}</p>
-<p>{{images[98].brands}}</p>
-<p>{{images[98].ingredients_text}}</p>
-<p>{{images[98].nova_group}}</p>
-<p>{{images[98].nutrition_grade_fr}}</p>
+<div id="list-popup-container-container" class="">
+    <div id="list-popup-container" class="hidden">
+        <div id="list-popup">
+            <div id="list-pop-up-picture"><img class="fill" src={{images[95].image_url}} /></div>
+            <div id="list-pop-up-name" class="font-text">Nom : {{images[95].product_name}}</div>
+            <div id="list-pop-up-name" class="font-small-text">Code barre : {{images[95].id}}</div>
+            <div id="list-pop-up-text" class="font-small-text">Description : Aussi appelé {{images[95].generic}}, ce
+                bonbon est fabriqué par {{images[95].brands}}. On le trouve principalement en {{images[95].countries}}. 
+                Il est le plus souvent commercialisé chez {{images[95].stores}} en sachet de {{images[95].quantity}}.</div>
 
 
-<div *ngFor="let current of images">
-    <h1>{{current.product_name}}</h1>
+
+        </div>
+
+    </div>
 </div>
-

@@ -1,6 +1,5 @@
-html,
-body {
-  margin: 0;
+html, body {
+    margin:0;
 }
 /* Navigation */
 
@@ -8,39 +7,38 @@ body {
 
 /* Fonts */
 .font-scary-title {
-  font-family: 'Permanent Marker', cursive;
-  color: #fff;
-  font-size: 4em;
-  letter-spacing: 0.2rem;
+    font-family: 'Permanent Marker', cursive;
+    color:#fff;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
 }
-.font-title{
+.font-big-title{
     font-family: 'Baloo Bhaijaan', cursive;
     color:#fff;
     font-size: 3em;
     margin-bottom:0.1em;
     line-height: 1em;
 }
-
-.font-text {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  font-size: 1.2em;
-  color: #fff;
+.font-title{
+    font-family: 'Baloo Bhaijaan', cursive;
+    color:#fff;
+    font-size: 1.2em;
+    margin-bottom:0.1em;
+    line-height: 1em;
+    letter-spacing: 0.05rem;
+}
+.font-text{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color:#fff;
 }
 
-.font-small-text {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
-  font-size: 1em;
-  color: #fff;
-}
-
-
-/* Map */
-
-#map {
-  /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
-  height: 50vh;
+.font-small-text{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color:#fff;
 }
 
 /* display none */

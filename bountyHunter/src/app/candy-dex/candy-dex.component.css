@@ -1,0 +1,145 @@
+
+.candyPage{
+    background-color:  #131129;
+}
+
+.successPage{
+    background-color: #188F55;
+}
+
+.navToggle{
+    text-align: center;
+    height: 10vh;
+}
+
+.successClass{
+    height: 45vh
+}
+
+.candyClass{
+    padding: 5vh 3vh;
+    overflow: scroll;
+}
+
+.badgeBox{
+    margin: 0 1vh;
+    /* background-color: red; */
+}
+
+.candyBox{
+    margin: 0 1vh;
+    height: 20vh;
+}
+
+h3{
+    /* background-color: white; */
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* Ajout Etienne */
+.candy-dex-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:35%;
+}
+#candy-dex-background{
+    background:#131129;
+    overflow: hidden;
+    transition:1.5s;
+    height: 100vh;
+}
+
+#candy-dex-icone-container{
+    width: 30%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#candy-dex-icone{
+    width:50%;
+    height: 16vw;
+    background-image:url(../../assets/icone_list.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition:0.5s;
+}
+#candy-dex-icone:active{
+    opacity:0.7;
+    transition:0.5s;
+}
+
+.badgeBox:active{
+    transform: scale(0.98);
+}
+
+#success-pop-up-container{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Pop-up Success*/
+#success-popup-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+#success-popup{
+    width: 80%;
+    height: 70vh;
+    background: #1F1D2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#success-popup-text{
+    width:65%;
+}
+/* cross */
+#success-popup-cross-container{
+    width:80%;
+    height: 5vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#success-popup-cross{
+    width: 8%;
+    height: 100%;
+    background-image:url(../../assets/pop_up_cross.png);
+    background-size: 100%;
+    background-position: center;
+}
+#success-pop-up-picture{
+    width:30%;
+    height: 30vw;
+    background-size:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#success-popup-name{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+    font-size:1.5em;
+}
+#success-popup-description{
+    margin-top: 4vh;
+    text-align:center;
+}
