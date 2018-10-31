@@ -43,6 +43,13 @@
     margin-right:3%;
 }
 
+div.empty {
+    display:none;
+  }
+  div.empty:first-child {
+    display:block;
+  }
+
 /* Pop-up */
 #list-popup-container{
     position: absolute;

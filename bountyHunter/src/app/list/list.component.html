@@ -4,7 +4,9 @@
 <div id="list-popup-container-container" class="hidden-page">
   <div id="list-popup-container" class="hidden">
     <div id="list-popup">
-      <div id="list-popup-cross-container"><div id="list-popup-cross" (click)="hideCounterBox()"></div></div>
+      <div id="list-popup-cross-container">
+        <div id="list-popup-cross" (click)="hideCounterBox()"></div>
+      </div>
       <div id="list-pop-up-picture" [ngStyle]="{'background-image': 'url('+currentSelectedCandy.img+')'}"></div>
       <div id="list-pop-up-name" class="font-text">{{currentSelectedCandy.name | bonbonName}}</div>
       <div id="list-pop-up-number">
@@ -15,7 +17,8 @@
         <div id="list-cnady-number" class="font-text">{{candyNumber}}</div>
 
       </div>
-      <button id="list-pop-up-button" class="font-text" (click)="addCandiesInLocalStorage(candyNumber, currentSelectedCandy.img)" (click)="hideCounterBox()">Ajouter</button>
+      <button id="list-pop-up-button" class="font-text" (click)="addCandiesInLocalStorage(candyNumber, currentSelectedCandy.img)"
+        (click)="hideCounterBox()">Ajouter</button>
     </div>
   </div>
 </div>
@@ -24,6 +27,7 @@
 <!-- List -->
 <div id="list-background">
   <div id="list-bonbons">
+
     <div *ngFor="let current of images | searchCandy:searchWord " class="list-bonbon">
       <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current.product_name,current.image_url, current.id, current.generic,current.brands, current.countries, current.stores, current.quantity)" (click)="displayCounterBox(current)"></app-candy>
     </div>
