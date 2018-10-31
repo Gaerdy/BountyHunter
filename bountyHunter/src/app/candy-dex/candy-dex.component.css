@@ -136,6 +136,8 @@ img{
 #candy-pop-up-text{
     text-align: justify;
     margin-top: 4vh;
+}
+
 .candyBox:active{
     transform: scale(0.98);
 }
