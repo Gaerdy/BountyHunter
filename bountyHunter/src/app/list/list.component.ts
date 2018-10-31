@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoBonbonService } from '../info-bonbon.service';
 import { Observable } from 'rxjs';
-import { BonbonInfo } from '../bonbon-info';
+import { BonbonInfo } from '../bonbon-info'; 
 
 declare var TweenMax: any;
 declare var Power4: any;
@@ -12,6 +12,12 @@ declare var Power4: any;
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+
+  @Input() searchWord: string;
+
+  
+  
 
   // Gestion du clic pour le bonbon sélectionné ( Participage à l'affichage de la popup)
 
@@ -69,20 +75,21 @@ export class ListComponent implements OnInit {
     }
   }
 
-  goTop() {
-    let pos = parseInt(window.pageYOffset.toString());
-    let proxy: any = { y: pos };
-    TweenMax.to(
-      proxy,
-      2,
-      {
-        ease: Power4.easeOut,
-        y: 0,
-        onUpdate: function () {
-          window.scrollTo(0, proxy.y);
-        }
-      }
-    );  
+  goTop(){
+    // let pos = parseInt(window.pageYOffset.toString());
+    // let proxy:any = { y: pos};
+    // TweenMax.to(
+    //   proxy, 
+    //   2, 
+    //   {
+    //     ease: Power4.easeOut,
+    //     y: 0,
+    //     onUpdate: function(){
+    //       window.scrollTo(0, proxy.y);
+    //     } 
+    //   }
+    // );
+    document.getElementById("all-pages").style.marginTop="0"; 
     setTimeout(()=>{
       document.getElementById("app-list").classList.add("hidden-page");
     },1600)

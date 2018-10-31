@@ -49,7 +49,7 @@ export class InfoBonbonService {
               }
             );
           }
-
+          console.log(images);
           return images;
 
         }
