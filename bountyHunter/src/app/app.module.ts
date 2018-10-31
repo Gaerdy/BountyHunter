@@ -15,6 +15,7 @@ import { BonbonNamePipe } from './bonbon-name.pipe';
 import { SuccessComponent } from './success/success.component';
 import { CandyDexComponent } from './candy-dex/candy-dex.component';
 import { MyCandyComponent } from './my-candy/my-candy.component';
+import { SuccessPopUpComponent } from './success-pop-up/success-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MyCandyComponent } from './my-candy/my-candy.component';
     BonbonNamePipe,
     SuccessComponent,
     CandyDexComponent,
-    MyCandyComponent
+    MyCandyComponent,
+    SuccessPopUpComponent
   ],
   imports: [
     BrowserModule,

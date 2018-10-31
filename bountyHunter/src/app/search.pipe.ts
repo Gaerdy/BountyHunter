@@ -19,7 +19,8 @@ export class SearchPipe implements PipeTransform {
     }
 
     console.log("coucou");
-    return result;
+
+      return result;
     
   }
 }
