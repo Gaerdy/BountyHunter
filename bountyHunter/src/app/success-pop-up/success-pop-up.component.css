@@ -1,53 +1,8 @@
-#list-button-top{
-    width:100%;
-    height: 10vh;
-    background: #f9821f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#list-button-top-square{
-    width:90%;
-    height: 70%;
-    border-top: solid #fff 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-}
-#list-button-top-square:active{
-    opacity:0.7;
-    transition: 0.5s;
-    transform: scale(0.95s);
-}
-#list-background{
-    width: 100%;
-    height: 90vh;
-    background: #1F1D2F;
-    padding-top:5vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: scroll;
-}
-#list-bonbons{
-    width: 95%;
-    margin-left:5%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.list-bonbon{
-    width:30%;
-    height: 32vh;
-    margin-right:3%;
-}
-
 /* Pop-up */
-#list-popup-container{
+#success-popup-container{
     position: absolute;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -55,7 +10,7 @@
     z-index: 10;
 }
 
-#list-popup{
+#success-popup{
     width: 80%;
     height: 70vh;
     background: #1F1D2F;
@@ -67,13 +22,13 @@
 
 
 /* cross */
-#list-popup-cross-container{
+#success-popup-cross-container{
     width:80%;
     height: 5vw;
     display: flex;
     flex-direction: row-reverse;
 }
-#list-popup-cross{
+#success-popup-cross{
     width: 8%;
     height: 100%;
     background-image:url(../../assets/pop_up_cross.png);
@@ -82,16 +37,16 @@
 }
 
 
-#list-pop-up-picture{
+#success-pop-up-picture{
     width:50%;
     height: 40vw;
     background-size:100%;
     background-position: center;
 }
-#list-pop-up-name{
+#success-pop-up-name{
     margin-top:2vh;
 }
-#list-pop-up-number{
+#success-pop-up-number{
     margin-top:2vh;
     width: 35%;
     display: flex;
@@ -100,35 +55,33 @@
     align-items: center;
     font-size: 3em;
 }
-#list-pop-up-arrows{
+#success-pop-up-arrows{
     width: 20%;
     height: 12vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.list-pop-up-arrow{
+.success-pop-up-arrow{
     height: 40%;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#list-pop-up-button{
+#success-pop-up-button{
     margin-top:4vh;
     width: 70%;
     padding:2vh;
     border:solid #fff 1px;
     background: none;
 }
-#list-pop-up-button:focus{
+#success-pop-up-button:focus{
     outline: none;
 }
-#list-pop-up-button:active{
+#success-pop-up-button:active{
     opacity: 0.7;
 }
-#list-cnady-number{
+#success-cnady-number{
     font-size: 1em;
 }
-
-

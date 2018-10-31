@@ -22,6 +22,7 @@ html, body {
     font-size: 1.2em;
     margin-bottom:0.1em;
     line-height: 1em;
+    letter-spacing: 0.05rem;
 }
 .font-text{
     font-family: 'Quicksand', sans-serif;
