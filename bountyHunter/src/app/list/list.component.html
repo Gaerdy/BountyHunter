@@ -1,10 +1,4 @@
 <!-- Button to top -->
-<<<<<<< HEAD
-<div id="list-button-top">
-  <div (click)="goTop()" class="font-text">Retour à la recherche</div>
-</div>
-=======
->>>>>>> c345abf4ab12b98833faafbf50332f7edb842b90
 
 <!-- pop-up -->
 <div id="list-popup-container-container" class="hidden-page">
@@ -30,15 +24,7 @@
 <!-- List -->
 <div id="list-background">
   <div id="list-bonbons">
-<<<<<<< HEAD
-    <div *ngFor="let current of images | searchCandy:searchWord " class="col-4 d-inline-block">
-      <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current)"></app-candy>
-    </div>
-  </div>
-</div>
-
-=======
-    <div *ngFor="let current of images" class="list-bonbon">
+    <div *ngFor="let current of images | searchCandy:searchWord " class="list-bonbon">
       <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current.product_name,current.image_url)" (click)="displayCounterBox(current)"></app-candy>
     </div>
   </div>
@@ -46,4 +32,3 @@
 <div id="list-button-top">
     <div (click)="goTop()" class="font-text">Retour à la recherche</div>
 </div>
->>>>>>> c345abf4ab12b98833faafbf50332f7edb842b90
