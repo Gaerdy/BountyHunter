@@ -23,12 +23,24 @@ export class ListComponent implements OnInit {
 
   public currentSelectedCandy: any = {
     "name": "",
-    "img": ""
+    "img": "",
+    "id":"",
+    "generic":"",
+    "brands":"",
+    "countries":"",
+    "stores":"",
+    "quantity":""
   }
 
-  public CandyInfo(param_name, param_img): any {
+  public CandyInfo(param_name, param_img, param_id,param_generic, param_brands, param_countries, param_stores, param_quantity): any {
     this.currentSelectedCandy.name = param_name;
     this.currentSelectedCandy.img = param_img;
+    this.currentSelectedCandy.id = param_id;
+    this.currentSelectedCandy.generic = param_generic;
+    this.currentSelectedCandy.brands = param_brands;
+    this.currentSelectedCandy.countries = param_countries;
+    this.currentSelectedCandy.stores = param_stores;
+    this.currentSelectedCandy.quantity = param_quantity
   }
 
   // Utilisation service
@@ -115,14 +127,19 @@ export class ListComponent implements OnInit {
       let objet = {
         "name": this.currentSelectedCandy.name,
         "nbCandies": nbCandies,
-        "url_img": url_img
+        "url_img": url_img,
+        "id":this.currentSelectedCandy.id,
+        "generic":this.currentSelectedCandy.generic,
+        "brands":this.currentSelectedCandy.brands,
+        "countries":this.currentSelectedCandy.countries,
+        "stores":this.currentSelectedCandy.stores,
+        "quantity":this.currentSelectedCandy.quantity
       }
       let objet_json = JSON.stringify(objet);
-
       localStorage.setItem("'" + this.currentSelectedCandy.name + "'", objet_json);
+      location.reload();
     }
-
-
+  
     console.log(localStorage.getItem("'" + this.currentSelectedCandy.name + "'"));
     console.log(localStorage);
   }

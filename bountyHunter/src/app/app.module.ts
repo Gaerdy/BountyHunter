@@ -6,6 +6,7 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { CandyComponent } from './candy/candy.component';
+import { MapComponent } from "./map/map.component";
 import { CandyInfoComponent } from './candy-info/candy-info.component';
 import { InfoBonbonService } from './info-bonbon.service';
 import { SearchComponent } from './search/search.component';
@@ -15,6 +16,7 @@ import { BonbonNamePipe } from './bonbon-name.pipe';
 import { SuccessComponent } from './success/success.component';
 import { CandyDexComponent } from './candy-dex/candy-dex.component';
 import { MyCandyComponent } from './my-candy/my-candy.component';
+import { SuccessPopUpComponent } from './success-pop-up/success-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,15 @@ import { MyCandyComponent } from './my-candy/my-candy.component';
     CandyInfoComponent,
     SearchComponent,
     ResponseComponent,
+    CandyComponent,
+    MapComponent,
     ListComponent,
     SearchPipe,
     BonbonNamePipe,
     SuccessComponent,
     CandyDexComponent,
-    MyCandyComponent
+    MyCandyComponent,
+    SuccessPopUpComponent
   ],
   imports: [
     BrowserModule,

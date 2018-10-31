@@ -68,7 +68,7 @@ h3{
 #candy-dex-icone{
     width:50%;
     height: 16vw;
-    background-image:url(../../assets/icone_pumpkin.png);
+    background-image:url(../../assets/icone_list.png);
     background-size: 100%;
     background-repeat: no-repeat;
     transition:0.5s;
@@ -80,4 +80,66 @@ h3{
 
 .badgeBox:active, .candyBox:active{
     transform: scale(0.98);
+}
+
+#success-pop-up-container{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Pop-up Success*/
+#success-popup-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+#success-popup{
+    width: 80%;
+    height: 70vh;
+    background: #1F1D2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#success-popup-text{
+    width:65%;
+}
+/* cross */
+#success-popup-cross-container{
+    width:80%;
+    height: 5vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#success-popup-cross{
+    width: 8%;
+    height: 100%;
+    background-image:url(../../assets/pop_up_cross.png);
+    background-size: 100%;
+    background-position: center;
+}
+#success-pop-up-picture{
+    width:30%;
+    height: 30vw;
+    background-size:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#success-popup-name{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+    font-size:1.5em;
+}
+#success-popup-description{
+    margin-top: 4vh;
+    text-align:center;
 }

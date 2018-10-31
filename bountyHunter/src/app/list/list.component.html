@@ -25,10 +25,10 @@
 <div id="list-background">
   <div id="list-bonbons">
     <div *ngFor="let current of images | searchCandy:searchWord " class="list-bonbon">
-      <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current.product_name,current.image_url)" (click)="displayCounterBox(current)"></app-candy>
+      <app-candy [product_name]="current.product_name" [image_url]="current.image_url" (click)="CandyInfo(current.product_name,current.image_url, current.id, current.generic,current.brands, current.countries, current.stores, current.quantity)" (click)="displayCounterBox(current)"></app-candy>
     </div>
   </div>
 </div>
 <div id="list-button-top">
-    <div id="list-button-top-square" (click)="goTop()" class="font-small-text">Retour à la recherche</div>
+    <div id="list-button-top-square" (click)="goTop()" class="font-title">Retour à la recherche</div>
 </div>
