@@ -1,22 +1,25 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+
+
 @Pipe({
-  name: 'search'
+  name: 'searchCandy'
 })
 export class SearchPipe implements PipeTransform {
+  transform(products: any[], searchWord: string): any[] {
+    
+    let result: any[] = [];
+    console.log(products.length);
 
-  transform(value: any[]): any[] {
-  
-    let result:any[];
-
-    if (value[0] != null){
-      for (let i=0; i< value.length; i++){
-        result.push(value[i]);
+    
+    for (let i = 0; i < products.length; i++){
+      if ( products[i] !== undefined && products[i].product_name.toLowerCase().indexOf(searchWord.toLowerCase()) > -1){
+        result.push(products[i]);
+      }
     }
+
+    console.log("coucou");
     return result;
-    }
-
-
+    
   }
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoBonbonService } from '../info-bonbon.service';
 import { Observable } from 'rxjs';
 import { BonbonInfo } from '../bonbon-info'; 
@@ -13,7 +13,11 @@ declare var Power4:any;
 })
 export class ListComponent implements OnInit {
 
-  public searchWord:string = "Haribo";
+
+  @Input() searchWord: string;
+
+  
+  
 
   // Gestion du clic pour le bonbon sélectionné ( Participage à l'affichage de la popup)
   public currentSelectedCandy: any = {
