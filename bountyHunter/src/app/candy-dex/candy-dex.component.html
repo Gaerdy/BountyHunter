@@ -13,6 +13,20 @@
         </div>
     </div>
 </div>
+<!------------------------------------- Pop-up ---------------------------------------->
+
+<div id="candy-popup-container" class="hidden">
+    <div id="candy-popup">
+        <div id="candy-popup-cross-container"><div id="candy-popup-cross" (click)="popUpCandy()"></div></div>
+        <div id="candy-pop-up-picture" [ngStyle]="{'background-image': 'url('+currentCandyList.img+')'}"></div>
+        <div id="candy-pop-up-name" class="font-text">Nom : {{currentCandyList.name}}</div>
+        <div id="candy-pop-up-name" class="font-small-text">J'en ai {{currentCandyList.counter}}</div>
+    </div>
+</div>
+
+
+<!------------------------------------- NavTab --------------------------------------------->
+
 <div id="candy-dex-background">
 <div class="container-fluid">
     <div class="row navToggle d-flex">
@@ -21,6 +35,8 @@
         <div id="candy-dex-icone-container"><div id="candy-dex-icone" (click)="goToSearchFromDex()"></div>
     </div>
 </div>
+
+<!-------------------------------------- Success ----------------------------------------->
 
 <div id="successTab" class="listPage container-fluid hidden">
     <div class="row successClass justify-content-center">
@@ -37,9 +53,11 @@
     </div>
 </div>
 
+<!--------------------------------------- Candies ----------------------------------------->
+
 <div id="candyTab">
-    <div class="row candyClass justify-content-center">
-        <div class="candyBox col-3 p-0" *ngFor='let current of candyList'>
+    <div class="row candyClass justify-content-around">
+        <div class="candyBox col-3 p-0" *ngFor='let current of candyList' (click)="popUpCandyInfo(current.name, current.url_img, current.id, current.nbCandies, current.generic, current.brands, current.countries, current.stores, current.quantity)" (click)="popUpCandy()">
             <app-my-candy [name]='current.name' [img]='current.url_img' [counter]='current.nbCandies' [description]='current.description'></app-my-candy>
         </div>
     </div>

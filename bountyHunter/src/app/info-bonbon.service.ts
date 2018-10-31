@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { BonbonInfo } from "./bonbon-info";
 
 @Injectable({
   providedIn: 'root'

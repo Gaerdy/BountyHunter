@@ -1,7 +1,10 @@
 <div class="candy">
-  <img class="badgeImg img-fluid" src="{{img}}" alt="">
-  <p class="font-small-text">{{counter}}</p>
-  <div class="candyInfo">
-    <h1 class="font-small-text candyTitle m-0">{{name}}</h1>
+  <div class="candy-box">
+    <div id="candy-box-img" [ngStyle]="{'background-image': 'url('+img+')'}">
+      <p class="font-small-text">{{counter}}</p>
+    </div>
+    <div class="candyInfo">
+      <h1 class="font-small-text m-0">{{name | bonbonName}}</h1>
+    </div>
   </div>
 </div>
