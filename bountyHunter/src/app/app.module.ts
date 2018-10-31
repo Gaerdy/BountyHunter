@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from "@angular/http";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
@@ -9,6 +10,7 @@ import { CandyInfoComponent } from './candy-info/candy-info.component';
 import { InfoBonbonService } from './info-bonbon.service';
 import { SearchComponent } from './search/search.component';
 import { ResponseComponent } from './response/response.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { ResponseComponent } from './response/response.component';
     SearchComponent,
     ResponseComponent,
     ListComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [InfoBonbonService],
   bootstrap: [AppComponent]

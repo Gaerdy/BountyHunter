@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoBonbonService } from '../info-bonbon.service';
 import { Observable } from 'rxjs';
-import { BonbonInfo } from '../bonbon-info';
+import { BonbonInfo } from '../bonbon-info'; 
 
 declare var TweenMax:any;
 declare var Power4:any;
@@ -12,6 +12,12 @@ declare var Power4:any;
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+
+  @Input() searchWord: string;
+
+  
+  
 
   // Gestion du clic pour le bonbon sélectionné ( Participage à l'affichage de la popup)
   public currentSelectedCandy: any = {

@@ -8,7 +8,8 @@
   </div>
   <div id="search-research">
     <label class="font-text">Un bonbon ou la vie ?</label>
-    <input id="search-input" placeholder="Un bonbon !!!"/>
+    <input id="search-input" placeholder="Un bonbon !!!" [(ngModel)]="searchWord"/>
     <button id="search-button" (click)="goToList()" class="font-text">Rechercher</button>
   </div>
 </div>
+<app-list id="app-list" class="hidden-page" [searchWord]="searchWord"></app-list>

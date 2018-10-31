@@ -10,6 +10,8 @@ declare var Power4:any;
 })
 export class SearchComponent implements OnInit {
 
+  public searchWord:string;
+
   constructor() { }
 
   ngOnInit() {
