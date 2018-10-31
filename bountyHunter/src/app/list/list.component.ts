@@ -136,11 +136,10 @@ export class ListComponent implements OnInit {
         "quantity":this.currentSelectedCandy.quantity
       }
       let objet_json = JSON.stringify(objet);
-
       localStorage.setItem("'" + this.currentSelectedCandy.name + "'", objet_json);
+      location.reload();
     }
-
-
+  
     console.log(localStorage.getItem("'" + this.currentSelectedCandy.name + "'"));
     console.log(localStorage);
   }
