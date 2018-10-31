@@ -1,15 +1,15 @@
 <!------------------------------------- Pop-up ---------------------------------------->
 
-<div id="list-popup-container" class="hidden">
-    <div id="list-popup">
-        <div id="list-popup-cross-container"><div id="list-popup-cross" (click)="popUpCandy()"></div></div>
-        <div id="list-pop-up-picture" [ngStyle]="{'background-image': 'url('+img+')'}"></div>
-        <div id="list-pop-up-name" class="font-text">Nom : {{currentCandy.name}}</div>
-        <div id="list-pop-up-name" class="font-small-text">Code barre : {{id}}</div>
-        <div id="list-pop-up-name" class="font-small-text">J'en ai {{currentCandy.counter}}</div>
-        <div id="list-pop-up-text" class="font-small-text">Description : Aussi appelé {{generic}}, ce
-            bonbon est fabriqué par {{brands}}. On le trouve principalement en {{countries}}. 
-            Il est le plus souvent commercialisé chez {{stores}} en sachet de {{quantity}}.</div>
+<div id="candy-popup-container" class="hidden">
+    <div id="candy-popup">
+        <div id="candy-popup-cross-container"><div id="candy-popup-cross" (click)="popUpCandy()"></div></div>
+        <div id="candy-pop-up-picture" [ngStyle]="{'background-image': 'url('+currentCandyList.img+')'}"></div>
+        <div id="candy-pop-up-name" class="font-text">Nom : {{currentCandyList.name}}</div>
+        <div id="candy-pop-up-name" class="font-small-text">Code barre : {{currentCandyList.id}}</div>
+        <div id="candy-pop-up-name" class="font-small-text">J'en ai {{currentCandyList.counter}}</div>
+        <div id="candy-pop-up-text" class="font-small-text">Description : Aussi appelé {{currentCandyList.generic}}, ce
+            bonbon est fabriqué par {{currentCandyList.brands}}. On le trouve principalement en {{currentCandyList.countries}}. 
+            Il est le plus souvent commercialisé chez {{currentCandyList.stores}} en sachet de {{currentCandyList.quantity}}.</div>
     </div>
 </div>
 
@@ -46,7 +46,7 @@
 
 <div id="candyTab">
     <div class="row candyClass justify-content-around">
-        <div class="candyBox col-3 p-0" *ngFor='let current of candyList' (click)="CandyInfo(current)" (click)="popUpCandy()">
+        <div class="candyBox col-3 p-0" *ngFor='let current of candyList' (click)="popUpCandyInfo(current.name, current.url_img, current.id, current.nbCandies, current.generic, current.brands, current.countries, current.stores, current.quantity)" (click)="popUpCandy()">
             <app-my-candy [name]='current.name' [img]='current.url_img' [counter]='current.nbCandies' [description]='current.description'></app-my-candy>
         </div>
     </div>

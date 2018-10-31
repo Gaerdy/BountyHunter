@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-candy-dex',
@@ -27,6 +27,7 @@ export class CandyDexComponent implements OnInit {
   ];
 
   public candyList: any[] = [];
+
   public lengthCandyList: number;
 
   public currentBadge: any = {
@@ -41,6 +42,18 @@ export class CandyDexComponent implements OnInit {
     'counter': 0
   };
 
+  public currentCandyList: any = {
+    'name': '',
+    'img': '',
+    'id': '',
+    'counter': 0,
+    'generic': '',
+    'brands': '',
+    'countries': '',
+    'stores': '',
+    'quantity': ''
+  };
+
   public status: boolean = false;
 
   public badgeInfo(badge: any): any {
@@ -49,10 +62,19 @@ export class CandyDexComponent implements OnInit {
     this.currentBadge.description = badge.description;
   }
 
-  public CandyInfo(candy: any): any {
-    this.currentCandy.name = candy.name;
-    this.currentCandy.img = candy.img;
-    this.currentCandy.counter = candy.counter;
+  // tslint:disable-next-line:max-line-length
+  public popUpCandyInfo(candy_name, candy_img, candy_id, candy_counter, candy_generic, candy_brands, candy_countries, candy_stores, candy_quantity): any {
+    this.currentCandyList.name = candy_name;
+    this.currentCandyList.img = candy_img;
+    this.currentCandyList.id = candy_id;
+    this.currentCandyList.counter = candy_counter;
+    this.currentCandyList.generic = candy_generic;
+    this.currentCandyList.brands = candy_brands;
+    this.currentCandyList.countries = candy_countries;
+    this.currentCandyList.stores = candy_stores;
+    this.currentCandyList.quantity = candy_quantity;
+
+    console.log(this.currentCandyList);
   }
 
   public clickEvent(witchOne: string): void {
@@ -71,7 +93,7 @@ export class CandyDexComponent implements OnInit {
   }
 
   public popUpCandy() {
-    const candyPop = document.getElementById('list-popup-container');
+    const candyPop = document.getElementById('candy-popup-container');
     if (candyPop.classList.contains('hidden')) {
       candyPop.classList.remove('hidden');
     } else {
@@ -93,10 +115,12 @@ export class CandyDexComponent implements OnInit {
     for (let i = 0; i < this.lengthCandyList; i++) {
       this.candyList.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
     }
-  };
+    console.log(this.candyList);
+  }
 
 
 
 
 }
+
 

@@ -80,7 +80,7 @@ h3{
 
 /******************************* Pop-up Candy ***************************************/
 
-#list-popup-container{
+#candy-popup-container{
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -91,7 +91,7 @@ h3{
     z-index: 1000;
 }
 
-#list-popup{
+#candy-popup{
     width: 80%;
     height: 90vh;
     background: #1F1D2F;
@@ -104,14 +104,14 @@ h3{
     margin: 5vh;
 }
 
-#list-popup-cross-container{
+#candy-popup-cross-container{
     width: 100%;
     height: 5vw;
     /* display: flex;
     flex-direction: row-reverse; */
 }
 
-#list-popup-cross{
+#candy-popup-cross{
     width: 8%;
     height: 100%;
     background-image:url(../../assets/pop_up_cross.png);
@@ -119,7 +119,7 @@ h3{
     background-position: center;
 }
 
-#list-pop-up-picture{
+#candy-pop-up-picture{
     width: 35vh;
     height: 35vH;
     border-radius: 50%;
@@ -132,48 +132,11 @@ img{
 }
 
 
-#list-pop-up-name{
+#candy-pop-up-name{
     margin-top:2vh;
 }
 
-#list-pop-up-text{
+#candy-pop-up-text{
     text-align: justify;
     margin-top: 4vh;
-}
-
-#list-pop-up-number{
-    margin-top:2vh;
-    width: 35%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 3em;
-}
-#list-pop-up-arrows{
-    width: 20%;
-    height: 12vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.list-pop-up-arrow{
-    height: 40%;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#list-pop-up-button{
-    margin-top:4vh;
-    width: 70%;
-    padding:2vh;
-    border:solid #fff 1px;
-    background: none;
-}
-#list-pop-up-button:focus{
-    outline: none;
-}
-#list-pop-up-button:active{
-    opacity: 0.7;
 }
