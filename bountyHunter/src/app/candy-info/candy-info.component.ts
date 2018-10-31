@@ -18,9 +18,17 @@ export class CandyInfoComponent implements OnInit {
 
   private service: InfoBonbonService;
 
+
+
+
+
+
+  
+
+
   constructor(
-    param_bonbon_service : InfoBonbonService
-  ) { 
+    param_bonbon_service: InfoBonbonService
+  ) {
     this.planetImg = new BonbonInfo("bonbon", "bonbon");
     this.service = param_bonbon_service;
     this.img = "";
@@ -37,5 +45,4 @@ export class CandyInfoComponent implements OnInit {
 
     );
   }
-
 }

@@ -28,6 +28,13 @@
     height: 32vh;
 }
 
+div.empty {
+    display:none;
+  }
+  div.empty:first-child {
+    display:block;
+  }
+
 /* Pop-up */
 #list-popup-container{
     position: absolute;
