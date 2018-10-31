@@ -43,6 +43,7 @@ h3{
     display: none;
 }
 
+
 /* Ajout Etienne */
 .candy-dex-toggle{
     display: flex;
@@ -53,6 +54,8 @@ h3{
 #candy-dex-background{
     background:#131129;
     overflow: hidden;
+    transition:1.5s;
+    height: 100vh;
 }
 
 #candy-dex-icone-container{

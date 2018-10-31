@@ -4,12 +4,13 @@
     <div id="search-icone-map" (click)="moveToMap()" class="search-icone"></div>
   </div>
   <div id="search-welcome">
-    <p class="font-title">Bounty Hunter</p>
+    <p class="font-big-title">Booouhnty Hunter</p>
+    <p class="font-small-text">Avec Bounty Hunter tu peux lister tous tes bonbons récoltés lors de la nuit d'Haloween.<br/>Effrayant non ?</p>
   </div>
   <div id="search-research">
     <label class="font-text">Un bonbon ou la vie ?</label>
-    <input id="search-input" placeholder="Un bonbon !!!" [(ngModel)]="searchWord"/>
-    <button id="search-button" (click)="goToList()" class="font-text">Rechercher</button>
+    <input id="search-input" placeholder="Mon bonbon ..." [(ngModel)]="searchWord" class="font-text"/>
+    <button id="search-button" (click)="goToList()" class="font-small-text">Rechercher</button>
   </div>
 </div>
 <app-list id="app-list" class="hidden-page" [searchWord]="searchWord"></app-list>

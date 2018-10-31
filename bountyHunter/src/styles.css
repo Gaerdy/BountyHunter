@@ -9,6 +9,13 @@ html, body {
     font-size: 2rem;
     letter-spacing: 0.2rem;
 }
+.font-big-title{
+    font-family: 'Baloo Bhaijaan', cursive;
+    color:#fff;
+    font-size: 3em;
+    margin-bottom:0.1em;
+    line-height: 1em;
+}
 .font-title{
     font-family: 'Baloo Bhaijaan', cursive;
     color:#fff;
