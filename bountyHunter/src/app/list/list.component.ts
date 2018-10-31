@@ -56,12 +56,11 @@ export class ListComponent implements OnInit {
     );
   }
 
-  // Methods  
-
-  public candyNumber: number = 0;
-  candyUp() {
-    if (this.candyNumber < 99) {
-      this.candyNumber++;
+  // PopUp - Augmenter nombres de bonbons
+  public candyNumber:number =0;
+  candyUp(){
+    if (this.candyNumber <99 ) {
+      this.candyNumber ++;
     }
   }
   candyDown() {
@@ -83,10 +82,14 @@ export class ListComponent implements OnInit {
           window.scrollTo(0, proxy.y);
         }
       }
-    );
+    );  
+    setTimeout(()=>{
+      document.getElementById("app-list").classList.add("hidden-page");
+    },1600)
   }
 
-  displayCounterBox() {
+  displayCounterBox(){
+    this.candyNumber = 0;
     let counterBoxEl = document.getElementById("list-popup-container-container");
     counterBoxEl.classList.remove("hidden-page");
   }
