@@ -19,11 +19,10 @@ export class SearchPipe implements PipeTransform {
         result.push(products[i]);
       }
     }
-    if(result.length === 0) {
-      // return [undefined];
-    }
-    return result;
 
+    console.log("coucou");
 
+      return result;
+    
   }
 }
