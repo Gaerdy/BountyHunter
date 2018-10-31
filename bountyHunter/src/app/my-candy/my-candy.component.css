@@ -1,6 +1,4 @@
 .candyTitle{
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.6vh;
 }
 
 .candyInfo{
@@ -12,8 +10,8 @@
     text-align: center;
 }
 
-p{
+.candy > p{
     position: absolute;
-    left: 10vh;
-    margin: 0;
+    left: 70%;
+    top:7vh;
 }

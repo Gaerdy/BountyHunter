@@ -67,12 +67,15 @@ export class CandyDexComponent implements OnInit {
   public clickEvent(witchOne: string): void {
     const successDiv = document.getElementById('successTab');
     const candyDiv = document.getElementById('candyTab');
+    const background = document.getElementById("candy-dex-background");
     if (witchOne === 'candy' && candyDiv.classList.contains('hidden')) {
       successDiv.classList.add('hidden');
       candyDiv.classList.remove('hidden');
+      background.style.background="#131129";
     } else if (witchOne === 'success' && successDiv.classList.contains('hidden')) {
       successDiv.classList.remove('hidden');
       candyDiv.classList.add('hidden');
+      background.style.background="#188F55";
     }
   }
 

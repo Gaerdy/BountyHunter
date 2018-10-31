@@ -1,13 +1,10 @@
-.listPage{
-    background-color: blueviolet;
-}
 
 .candyPage{
-    background-color: orange;
+    background-color:  #131129;
 }
 
 .successPage{
-    background-color: blueviolet;
+    background-color: #188F55;
 }
 
 .navToggle{
@@ -20,9 +17,8 @@
 }
 
 .candyClass{
-    min-height: 90vh;
     padding: 5vh 3vh;
-    background-color: orange;
+    overflow: scroll;
 }
 
 .badgeBox{
@@ -40,10 +36,45 @@ h3{
     margin-top: 2vh;
     margin-bottom: 0;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 .hidden{
     display: none;
+}
+
+/* Ajout Etienne */
+.candy-dex-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:35%;
+}
+#candy-dex-background{
+    background:#131129;
+    overflow: hidden;
+}
+
+#candy-dex-icone-container{
+    width: 30%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#candy-dex-icone{
+    width:50%;
+    height: 16vw;
+    background-image:url(../../assets/icone_pumpkin.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition:0.5s;
+}
+#candy-dex-icone:active{
+    opacity:0.7;
+    transition:0.5s;
+}
+
+.badgeBox:active{
+    transform: scale(0.98);
 }
