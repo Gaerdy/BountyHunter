@@ -8,4 +8,9 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'bountyHunter';
   @Input() searchWord: string;
+
+  gotToSearchFrommap() {
+    document.getElementById("all-pages").style.marginLeft="-100%";
+  }
+
 }

@@ -39,3 +39,23 @@
     height: 100vh;
     background: #1F1C37;
 }
+/* map icone */
+#map-icone-container{
+    position: relative;
+    
+}
+#map-icone-position{
+    position: absolute;
+    width: 16%;
+    height: 16vw;
+    margin-left:17%;
+    margin-top:3vh;
+    background: #f9821f;
+    border-radius:50%;
+    background-image:url("../assets/icone_list.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    z-index: 999;
+}
