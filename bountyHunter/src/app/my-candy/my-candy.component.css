@@ -1,0 +1,17 @@
+.candyTitle{
+}
+
+.candyInfo{
+    margin-top: 1vh;
+}
+
+.candy{
+    width: 100%;
+    text-align: center;
+}
+
+.candy > p{
+    position: absolute;
+    left: 70%;
+    top:7vh;
+}

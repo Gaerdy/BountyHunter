@@ -41,6 +41,10 @@ export class ListComponent implements OnInit {
 
   private service: InfoBonbonService;
 
+  public candyNumber: number = 0;
+
+  // Gestion du clic pour le bonbon sélectionné ( Participage à l'affichage de la popup)
+
   constructor(
     param_bonbon_service: InfoBonbonService
   ) {
@@ -63,7 +67,6 @@ export class ListComponent implements OnInit {
   }
 
   // PopUp - Augmenter nombres de bonbons
-  public candyNumber:number =0;
   candyUp(){
     if (this.candyNumber <99 ) {
       this.candyNumber ++;

@@ -14,7 +14,7 @@
           <div id="list-pop-up-up" (click)="candyUp()" class="list-pop-up-arrow">+</div>
           <div id="list-pop-up-down" (click)="candyDown()" class="list-pop-up-arrow">-</div>
         </div>
-        <div class="font-text">{{candyNumber}}</div>
+        <div id="list-cnady-number" class="font-text">{{candyNumber}}</div>
 
       </div>
       <button id="list-pop-up-button" class="font-text" (click)="addCandiesInLocalStorage(candyNumber, currentSelectedCandy.img)"
@@ -37,5 +37,5 @@
   </div>
 </div>
 <div id="list-button-top">
-  <div (click)="goTop()" class="font-text">Retour à la recherche</div>
+    <div id="list-button-top-square" (click)="goTop()" class="font-small-text">Retour à la recherche</div>
 </div>
