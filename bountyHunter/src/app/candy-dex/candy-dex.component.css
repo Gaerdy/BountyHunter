@@ -56,17 +56,14 @@ h3{
 
 #candy-dex-icone-container{
     width: 30%;
-    height: 15vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #candy-dex-icone{
-    width:50%;
-    height: 16vw;
-    background-image:url(../../assets/icone_pumpkin.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    height: 7vh;
     transition:0.5s;
 }
 #candy-dex-icone:active{
@@ -139,4 +136,6 @@ img{
 #candy-pop-up-text{
     text-align: justify;
     margin-top: 4vh;
+.candyBox:active{
+    transform: scale(0.98);
 }
