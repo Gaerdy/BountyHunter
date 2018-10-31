@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-candy-dex',
   templateUrl: './candy-dex.component.html',
   styleUrls: ['./candy-dex.component.css']
 })
+
 export class CandyDexComponent implements OnInit {
 
   public levelList: any[] = [
@@ -25,18 +26,8 @@ export class CandyDexComponent implements OnInit {
     { name: 'Ultime', img: 'assets/candy6.png', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' }
   ];
 
-  public candyList: any[] = [
-    { name: 'Fraise Tagada', img: 'assets/candy3.png', counter: 14 },
-    { name: 'M&M\'s', img: 'assets/candy3.png', counter: 23 },
-    { name: 'Bounty', img: 'assets/candy3.png', counter: 1 },
-    { name: 'Ourson', img: 'assets/candy3.png', counter: 3 },
-    { name: 'Dragibus', img: 'assets/candy3.png', counter: 16 },
-    { name: 'Fraise Tagada', img: 'assets/candy3.png', counter: 14 },
-    { name: 'M&M\'s', img: 'assets/candy3.png', counter: 23 },
-    { name: 'Bounty', img: 'assets/candy3.png', counter: 1 },
-    { name: 'Ourson', img: 'assets/candy3.png', counter: 3 },
-    { name: 'Dragibus', img: 'assets/candy3.png', counter: 16 }
-  ];
+  public candyList: any[] = [];
+  public lengthCandyList: number;
 
   public currentBadge: any = {
     'name': '',
@@ -71,21 +62,31 @@ export class CandyDexComponent implements OnInit {
     if (witchOne === 'candy' && candyDiv.classList.contains('hidden')) {
       successDiv.classList.add('hidden');
       candyDiv.classList.remove('hidden');
-      background.style.background="#131129";
+      background.style.background = "#131129";
     } else if (witchOne === 'success' && successDiv.classList.contains('hidden')) {
       successDiv.classList.remove('hidden');
       candyDiv.classList.add('hidden');
-      background.style.background="#188F55";
+      background.style.background = "#188F55";
     }
+  }  
+  
+  goToSearchFromDex() {
+    document.getElementById("all-pages").style.marginLeft = "-100%";
   }
+
+  // Constructor & ngOnInit()
 
   constructor() { }
 
   ngOnInit() {
-  }
+    this.lengthCandyList = localStorage.length;
+    for (let i = 0; i < this.lengthCandyList; i++) {
+      this.candyList.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+    }
+  };
 
-  goToSearchFromDex(){
-    document.getElementById("all-pages").style.marginLeft="-100%";
-  }
+
+
 
 }
+
