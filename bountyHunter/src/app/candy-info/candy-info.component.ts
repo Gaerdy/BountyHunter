@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoBonbonService } from "../info-bonbon.service";
 import { BonbonInfo } from "../bonbon-info";
 import { Observable } from 'rxjs';

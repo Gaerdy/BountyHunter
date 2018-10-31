@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit, DoCheck, Input } from '@angular/core';
 
 @Component({
   selector: 'app-candy-dex',
@@ -68,8 +68,18 @@ export class CandyDexComponent implements OnInit {
       candyDiv.classList.add('hidden');
       background.style.background = "#188F55";
     }
-  }  
-  
+  }
+
+  public popUpCandy() {
+    const candyPop = document.getElementById('list-popup-container');
+    if (candyPop.classList.contains('hidden')) {
+      candyPop.classList.remove('hidden');
+    } else {
+      candyPop.classList.add('hidden');
+    }
+
+  }
+
   goToSearchFromDex() {
     document.getElementById("all-pages").style.marginLeft = "-100%";
   }

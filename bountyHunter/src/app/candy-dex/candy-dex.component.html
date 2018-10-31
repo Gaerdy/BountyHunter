@@ -1,3 +1,21 @@
+<!------------------------------------- Pop-up ---------------------------------------->
+
+<div id="list-popup-container" class="hidden">
+    <div id="list-popup">
+        <div id="list-popup-cross-container"><div id="list-popup-cross" (click)="popUpCandy()"></div></div>
+        <div id="list-pop-up-picture" [ngStyle]="{'background-image': 'url('+img+')'}"></div>
+        <div id="list-pop-up-name" class="font-text">Nom : {{currentCandy.name}}</div>
+        <div id="list-pop-up-name" class="font-small-text">Code barre : {{id}}</div>
+        <div id="list-pop-up-name" class="font-small-text">J'en ai {{currentCandy.counter}}</div>
+        <div id="list-pop-up-text" class="font-small-text">Description : Aussi appelé {{generic}}, ce
+            bonbon est fabriqué par {{brands}}. On le trouve principalement en {{countries}}. 
+            Il est le plus souvent commercialisé chez {{stores}} en sachet de {{quantity}}.</div>
+    </div>
+</div>
+
+
+<!------------------------------------- NavTab --------------------------------------------->
+
 <div id="candy-dex-background">
 <div class="container-fluid">
     <div class="row navToggle d-flex">
@@ -6,6 +24,8 @@
         <div id="candy-dex-icone-container"><div id="candy-dex-icone" (click)="goToSearchFromDex()"></div>
     </div>
 </div>
+
+<!-------------------------------------- Success ----------------------------------------->
 
 <div id="successTab" class="listPage container-fluid hidden">
     <div class="row successClass justify-content-center">
@@ -22,9 +42,11 @@
     </div>
 </div>
 
+<!--------------------------------------- Candies ----------------------------------------->
+
 <div id="candyTab">
     <div class="row candyClass justify-content-around">
-        <div class="candyBox col-3 p-0" *ngFor='let current of candyList'>
+        <div class="candyBox col-3 p-0" *ngFor='let current of candyList' (click)="CandyInfo(current)" (click)="popUpCandy()">
             <app-my-candy [name]='current.name' [img]='current.url_img' [counter]='current.nbCandies' [description]='current.description'></app-my-candy>
         </div>
     </div>

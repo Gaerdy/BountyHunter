@@ -23,7 +23,6 @@
 
 .badgeBox{
     margin: 0 1vh;
-    /* background-color: red; */
 }
 
 .candyBox{
@@ -32,7 +31,6 @@
 }
 
 h3{
-    /* background-color: white; */
     margin-top: 2vh;
     margin-bottom: 0;
     padding: 0;
@@ -43,8 +41,6 @@ h3{
     display: none;
 }
 
-
-/* Ajout Etienne */
 .candy-dex-toggle{
     display: flex;
     align-items: center;
@@ -80,4 +76,104 @@ h3{
 
 .badgeBox:active, .candyBox:active{
     transform: scale(0.98);
+}
+
+/******************************* Pop-up Candy ***************************************/
+
+#list-popup-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#list-popup{
+    width: 80%;
+    height: 90vh;
+    background: #1F1D2F;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* overflow: auto; */
+    padding: 7%;
+    margin: 5vh;
+}
+
+#list-popup-cross-container{
+    width: 100%;
+    height: 5vw;
+    /* display: flex;
+    flex-direction: row-reverse; */
+}
+
+#list-popup-cross{
+    width: 8%;
+    height: 100%;
+    background-image:url(../../assets/pop_up_cross.png);
+    background-size: 100%;
+    background-position: center;
+}
+
+#list-pop-up-picture{
+    width: 35vh;
+    height: 35vH;
+    border-radius: 50%;
+    border: solid #fff 2px;
+}
+
+img{
+    width:100%;
+    height: 40vw;
+}
+
+
+#list-pop-up-name{
+    margin-top:2vh;
+}
+
+#list-pop-up-text{
+    text-align: justify;
+    margin-top: 4vh;
+}
+
+#list-pop-up-number{
+    margin-top:2vh;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3em;
+}
+#list-pop-up-arrows{
+    width: 20%;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.list-pop-up-arrow{
+    height: 40%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#list-pop-up-button{
+    margin-top:4vh;
+    width: 70%;
+    padding:2vh;
+    border:solid #fff 1px;
+    background: none;
+}
+#list-pop-up-button:focus{
+    outline: none;
+}
+#list-pop-up-button:active{
+    opacity: 0.7;
 }
