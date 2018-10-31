@@ -12,6 +12,9 @@ import { SearchComponent } from './search/search.component';
 import { ResponseComponent } from './response/response.component';
 import { SearchPipe } from './search.pipe';
 import { BonbonNamePipe } from './bonbon-name.pipe';
+import { SuccessComponent } from './success/success.component';
+import { CandyDexComponent } from './candy-dex/candy-dex.component';
+import { MyCandyComponent } from './my-candy/my-candy.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { BonbonNamePipe } from './bonbon-name.pipe';
     ListComponent,
     SearchPipe,
     BonbonNamePipe,
+    SuccessComponent,
+    CandyDexComponent,
+    MyCandyComponent
   ],
   imports: [
     BrowserModule,
