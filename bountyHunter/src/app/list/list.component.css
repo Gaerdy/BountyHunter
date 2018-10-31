@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+    overflow: scroll;
 }
 #list-bonbons{
     width: 90%;
@@ -25,6 +25,7 @@
 }
 .list-bonbon{
     width:30%;
+    height: 32vh;
 }
 
 /* Pop-up */
@@ -36,6 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 #list-popup{
@@ -47,10 +49,29 @@
     align-items: center;
     justify-content: center;
 }
+
+
+/* cross */
+#list-popup-cross-container{
+    width:80%;
+    height: 5vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#list-popup-cross{
+    width: 8%;
+    height: 100%;
+    background-image:url(../../assets/pop_up_cross.png);
+    background-size: 100%;
+    background-position: center;
+}
+
+
 #list-pop-up-picture{
     width:50%;
     height: 40vw;
-    background: #fff;
+    background-size:100%;
+    background-position: center;
 }
 #list-pop-up-name{
     margin-top:2vh;

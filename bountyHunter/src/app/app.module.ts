@@ -10,7 +10,11 @@ import { CandyInfoComponent } from './candy-info/candy-info.component';
 import { InfoBonbonService } from './info-bonbon.service';
 import { SearchComponent } from './search/search.component';
 import { ResponseComponent } from './response/response.component';
+<<<<<<< HEAD
 import { SearchPipe } from './search.pipe';
+=======
+import { BonbonNamePipe } from './bonbon-name.pipe';
+>>>>>>> c345abf4ab12b98833faafbf50332f7edb842b90
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { SearchPipe } from './search.pipe';
     SearchComponent,
     ResponseComponent,
     ListComponent,
+<<<<<<< HEAD
     SearchPipe,
+=======
+    BonbonNamePipe,
+>>>>>>> c345abf4ab12b98833faafbf50332f7edb842b90
   ],
   imports: [
     BrowserModule,

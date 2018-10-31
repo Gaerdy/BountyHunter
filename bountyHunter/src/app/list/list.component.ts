@@ -20,14 +20,15 @@ export class ListComponent implements OnInit {
   
 
   // Gestion du clic pour le bonbon sélectionné ( Participage à l'affichage de la popup)
+
   public currentSelectedCandy: any = {
     "name": "",
     "img": ""
   }
 
-  public CandyInfo(param_obj: any): any {
-    this.currentSelectedCandy.name = param_obj.name;
-    this.currentSelectedCandy.img = param_obj.img;
+  public CandyInfo(param_name, param_img): any {
+    this.currentSelectedCandy.name = param_name;
+    this.currentSelectedCandy.img = param_img;
   }
 
   // Utilisation service
@@ -60,6 +61,8 @@ export class ListComponent implements OnInit {
 
     );
   }
+
+  // PopUp - Augmenter nombres de bonbons
   public candyNumber:number =0;
   candyUp(){
     if (this.candyNumber <99 ) {
@@ -86,6 +89,28 @@ export class ListComponent implements OnInit {
         } 
       }
     );  
+    setTimeout(()=>{
+      document.getElementById("app-list").classList.add("hidden-page");
+    },1600)
+  }
+
+  displayCounterBox(){
+    this.candyNumber = 0;
+    let counterBoxEl = document.getElementById("list-popup-container-container");
+    counterBoxEl.classList.remove("hidden-page");
+  }
+
+  hideCounterBox(){
+    let counterBoxEl = document.getElementById("list-popup-container-container");
+    counterBoxEl.classList.add("hidden-page");
+  }
+
+  addCandiesInLocalStorage(nbCandies:number){
+
+    localStorage.setItem("'" + this.currentSelectedCandy.name + "'" , nbCandies.toString());
+
+    console.log(localStorage.getItem("'" + this.currentSelectedCandy.name + "'" ));
+    console.log(localStorage);
   }
 
 }
