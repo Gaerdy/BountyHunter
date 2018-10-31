@@ -1,7 +1,7 @@
 <div id="search-background">
   <div id="search-topbar">
-    <div id="search-icone-list" class="search-icone"></div>
-    <div id="search-icone-map" class="search-icone"></div>
+    <div id="search-icone-list" (click)="moveToSuccess()" class="search-icone"></div>
+    <div id="search-icone-map" (click)="moveToMap()" class="search-icone"></div>
   </div>
   <div id="search-welcome">
     <p class="font-title">Bounty Hunter</p>
@@ -12,3 +12,4 @@
     <button id="search-button" (click)="goToList()" class="font-text">Rechercher</button>
   </div>
 </div>
+<app-list id="app-list" class="hidden-page"></app-list>

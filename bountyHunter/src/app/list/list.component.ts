@@ -70,19 +70,20 @@ export class ListComponent implements OnInit {
   }
 
   goTop(){
-    let pos = parseInt(window.pageYOffset.toString());
-    let proxy:any = { y: pos};
-    TweenMax.to(
-      proxy, 
-      2, 
-      {
-        ease: Power4.easeOut,
-        y: 0,
-        onUpdate: function(){
-          window.scrollTo(0, proxy.y);
-        } 
-      }
-    );  
+    // let pos = parseInt(window.pageYOffset.toString());
+    // let proxy:any = { y: pos};
+    // TweenMax.to(
+    //   proxy, 
+    //   2, 
+    //   {
+    //     ease: Power4.easeOut,
+    //     y: 0,
+    //     onUpdate: function(){
+    //       window.scrollTo(0, proxy.y);
+    //     } 
+    //   }
+    // );
+    document.getElementById("all-pages").style.marginTop="0"; 
     setTimeout(()=>{
       document.getElementById("app-list").classList.add("hidden-page");
     },1600)
