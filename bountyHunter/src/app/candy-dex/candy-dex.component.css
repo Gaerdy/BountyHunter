@@ -1,0 +1,49 @@
+.listPage{
+    background-color: blueviolet;
+}
+
+.candyPage{
+    background-color: orange;
+}
+
+.successPage{
+    background-color: blueviolet;
+}
+
+.navToggle{
+    text-align: center;
+    height: 10vh;
+}
+
+.successClass{
+    height: 45vh
+}
+
+.candyClass{
+    min-height: 90vh;
+    padding: 5vh 3vh;
+    background-color: orange;
+}
+
+.badgeBox{
+    margin: 0 1vh;
+    /* background-color: red; */
+}
+
+.candyBox{
+    margin: 0 1vh;
+    height: 20vh;
+}
+
+h3{
+    /* background-color: white; */
+    margin-top: 2vh;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
