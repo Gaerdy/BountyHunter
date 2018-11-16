@@ -14,7 +14,7 @@ export class CandyInfoComponent implements OnInit {
   public planetImg: BonbonInfo = null;
 
   public img: string = "";
-  public images: string[];
+  public images: any[];
 
   private service: InfoBonbonService;
 
