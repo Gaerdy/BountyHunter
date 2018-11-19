@@ -1,27 +1,12 @@
 # BountyHunter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+## Hackathon interne de 30h
 
-## Development server
+### Présentation
+C’est Halloween, tu as revêtu ton plus beau costume et tu pars sonner aux maisons autour de chez toi pour récupérer un maximum de bonbons ! 
+Mais tu es un gourmand collectionneur, et cette année, tu les veux tous ! Heureusement, tu viens de commencer ta formation à la Wild et tu vas pouvoir coder une petite application pour t’aider !
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Objectifs
+Utiliser l’API OpenFoodFacts pour récupérer une liste de bonbons
+Utilisation de l’API adresses (et/ou la géolocalisation en HTML) pour localiser les maisons à visiter
+Possibilité d’indiquer les bonbons récupérés suite aux visites afin de remplir son bonbondex (dans l’idée d’un pokedex).
